@@ -1,0 +1,146 @@
+.steps-box {
+    width: 100%;
+    max-width: var(--max-width);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .steps-statement {
+    padding-top: 1.5vw;
+    /* Reduced padding */
+    padding-bottom: 1vw;
+    /* Reduced padding */
+    font-size: 2.5vw;
+    /* Significantly reduced font size */
+    color: var(--theme-dimLight);
+    background: linear-gradient(45deg, #0000ff, #1e90ff, #00bfff, #87ceeb, #b0e0e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    /* Center the text for better appearance */
+  }
+  
+  /* Media query for tablets (768px and below) */
+  @media (max-width: 768px) {
+    .steps-statement {
+      font-size: 3.5vw;
+      /* Reduced size */
+      padding-top: 2vw;
+      padding-bottom: 1.5vw;
+    }
+  }
+  
+  /* Media query for small screens (576px and below) */
+  @media (max-width: 576px) {
+    .steps-statement {
+      font-size: 4.5vw;
+      /* Reduced size */
+      padding-top: 2.5vw;
+      padding-bottom: 2vw;
+    }
+  }
+  
+  
+  
+  .steps {
+    display: flex;
+    flex-direction: row;
+    /* Default to row layout */
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .steps-item-container {
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    margin: 10px;
+    /* Reduced margin */
+    padding: 25px;
+    /* Reduced padding */
+    height: 220px;
+    /* Increased height to make steps taller */
+    width: calc(33.333% - 20px);
+    /* Adjusted width for reduced margins */
+    object-fit: contain;
+    text-align: center;
+    border-radius: 110px;
+    /* Adjusted to maintain original oval proportion (220px height / 2 = 110px) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .steps-item-container:hover {
+    transform: scale(1.1);
+    /* Reduced hover scale */
+  }
+  
+  .steps-item-header {
+    font-size: 18px;
+    /* Reduced font size */
+    font-weight: 600;
+    padding-top: 10px;
+    /* Reduced padding */
+    background: linear-gradient(45deg, #0000ff, #1e90ff, #00bfff, #87ceeb, #b0e0e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .steps-item {
+    font-size: 16px;
+    /* Increased font size for better readability */
+    font-weight: 200;
+    padding-top: 8px;
+    /* Reduced padding */
+    color: white;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 1200px) {
+    .steps-item {
+      font-size: 18px;
+      /* Increased size for better readability */
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .steps-item {
+      font-size: 16px;
+      /* Increased size for better readability */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .steps-item {
+      font-size: 14px;
+      /* Increased size for better readability */
+    }
+  }
+  
+  @media (max-width: 612px) {
+    .steps-item {
+      font-size: 12px;
+      /* Increased size for better readability */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .steps {
+      flex-direction: column;
+      /* Switch to column layout on small screens */
+      align-items: stretch;
+      /* Stretch items to fill the container */
+    }
+  
+    .steps-item-container {
+      width: 100%;
+      /* Full width for each item in column layout */
+      margin: 8px 0;
+      /* Reduced margin for column layout */
+      height: 180px;
+      /* Increased height for mobile to maintain proportion */
+    }
+  }
